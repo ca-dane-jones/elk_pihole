@@ -1,0 +1,33 @@
+format_version: 2.5.1
+name: pihole
+title: "Pi-hole logs"
+version: 0.0.7
+source:
+  license: "Elastic-2.0"
+description: "Collect and parse logs from Pi-hole with Elastic Agent."
+type: integration
+categories:
+  - network
+conditions:
+  kibana.version: "^8.6.0"
+  elastic.subscription: "basic"
+screenshots:
+  - src: /img/sample-screenshot.png
+    title: Sample screenshot
+    size: 600x600
+    type: image/png
+icons:
+  - src: /img/sample-logo.svg
+    title: Sample logo
+    size: 32x32
+    type: image/svg+xml
+policy_templates:
+  - name: Pi_hole
+    title: Pi-hole logs
+    description: Collect logs from Pi-hole systems
+    inputs:
+      - type: logfile
+        title: Collect Pi-hole logs
+        description: Collecting logs from Pi-hole sysetms
+owner:
+  github: elastic/integrations

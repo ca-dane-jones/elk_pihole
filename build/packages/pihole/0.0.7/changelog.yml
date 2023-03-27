@@ -1,0 +1,36 @@
+# newer versions go on top
+- version: "0.0.7"
+  changes:
+    - description: Added agent processor for multi-line logging support
+      type: enhancement
+      link: https://github.com/elastic/integrations/pull/1 # FIXME Replace with the real PR link
+- version: "0.0.6"
+  changes:
+    - description: Fixed grok patterns to align to default query logging specification
+      type: enhancement
+      link: https://github.com/elastic/integrations/pull/1 # FIXME Replace with the real PR link
+- version: "0.0.5"
+  changes:
+    - description: Renamed injest pipeline
+      type: enhancement
+      link: https://github.com/elastic/integrations/pull/1 # FIXME Replace with the real PR link
+- version: "0.0.4"
+  changes:
+    - description: Fixed issues with client IP ASN
+      type: enhancement
+      link: https://github.com/elastic/integrations/pull/1 # FIXME Replace with the real PR link
+- version: "0.0.3"
+  changes:
+    - description: Fixed issues with client IP ASN
+      type: enhancement
+      link: https://github.com/elastic/integrations/pull/1 # FIXME Replace with the real PR link
+- version: "0.0.2"
+  changes:
+    - description: Fixed issues with resolved IP ASN
+      type: enhancement
+      link: https://github.com/elastic/integrations/pull/1 # FIXME Replace with the real PR link
+- version: "0.0.1"
+  changes:
+    - description: Initial draft of the package
+      type: enhancement
+      link: https://github.com/elastic/integrations/pull/1 # FIXME Replace with the real PR link
