@@ -16,6 +16,9 @@ processors:
 - set:
     field: event.outcome
     value: "success"
+- set:
+    field: network.protocol
+    value: "dns"
 - rename:
     field: message
     target_field: event.original
@@ -35,7 +38,7 @@ processors:
 - grok:
     field: event.original
     patterns:
-    - "%{PROG:process.name}\\[%{POSINT:process.pid}\\]:( %{POSINT:_tmp.unknownint}
+    - "%{PROG:process.name}\\[%{POSINT:process.pid}\\]:( %{POSINT:transaction.id}
       %{IP:client.ip}\\/%{POSINT:client.port})? %{WORD:dns.type} %{GREEDYDATA:dns.question.name}
       is (%{IP:dns.resolved_ip})?(<?%{WORD:dns.answers.type}>|%{GREEDYDATA:dns.answers.type})?"
     ignore_failure: true
@@ -43,7 +46,7 @@ processors:
 - grok:
     field: event.original
     patterns:
-    - "%{PROG:process.name}\\[%{POSINT:process.pid}\\]:( %{POSINT:_tmp.unknownint}
+    - "%{PROG:process.name}\\[%{POSINT:process.pid}\\]:( %{POSINT:transaction.id}
       %{IP:client.ip}\\/%{POSINT:client.port})? %{WORD:dns.type}\\[%{WORD:dns.question.type}\\]
       %{GREEDYDATA:dns.question.name} from %{IP:client.ip}"
     ignore_failure: true
@@ -51,7 +54,7 @@ processors:
 - grok:
     field: event.original
     patterns:
-    - "%{PROG:process.name}\\[%{POSINT:process.pid}\\]:( %{POSINT:_tmp.unknownint}
+    - "%{PROG:process.name}\\[%{POSINT:process.pid}\\]:( %{POSINT:transaction.id}
       %{IP:client.ip}\\/%{POSINT:client.port})? %{WORD:dns.type} %{GREEDYDATA:dns.question.name}
       to %{IP:destination.ip}"
     ignore_failure: true

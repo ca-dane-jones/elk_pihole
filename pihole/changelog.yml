@@ -1,4 +1,19 @@
 # newer versions go on top
+- version: "0.0.11"
+  changes:
+    - description: Moved back to log stream
+      type: enhancement
+      link: https://github.com/elastic/integrations/pull/1 # FIXME Replace with the real PR link
+- version: "0.0.10"
+  changes:
+    - description: Added transaction ID field
+      type: enhancement
+      link: https://github.com/elastic/integrations/pull/1 # FIXME Replace with the real PR link
+- version: "0.0.9"
+  changes:
+    - description: Rollback of multi-line
+      type: enhancement
+      link: https://github.com/elastic/integrations/pull/1 # FIXME Replace with the real PR link
 - version: "0.0.8"
   changes:
     - description: Migrated agent log to stream

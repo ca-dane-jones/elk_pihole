@@ -36,3 +36,7 @@
   name: dns.resolved_ip.geo
 - external: ecs
   name: dns.type
+- external: ecs
+  name: network.protocol
+- external: ecs
+  name: transaction.id
